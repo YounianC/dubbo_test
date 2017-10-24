@@ -1,0 +1,7 @@
+.idea/
+consumer/target/
+interface/target/
+provider/target/
+provider_jar/target/
+service/target/
+*.iml

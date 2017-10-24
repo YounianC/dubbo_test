@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -17,7 +18,9 @@ public class TestServiceImpl implements TestService {
     private IStrategyDao iStrategyDao;
 
     public String getData() {
-        List<Map<Object, Object>> list = iStrategyDao.getAll();
-        return JSONObject.toJSONString(list);
+        //List<Map<Object, Object>> list = iStrategyDao.getAll();
+        //return JSONObject.toJSONString(list);
+        System.out.println("getData is called");
+        return  "DATA:" + new Date().toString();
     }
 }
