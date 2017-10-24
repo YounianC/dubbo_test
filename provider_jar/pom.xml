@@ -32,30 +32,7 @@
         <!-- 输出文件名 -->
         <finalName>provider</finalName>
 
-        <resources>
-            <resource>
-                <targetPath>${project.build.directory}/classes</targetPath>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-                <includes>
-                    <include>**/*.xml</include>
-                    <include>**/*.properties</include>
-                </includes>
-                <excludes>
-                    <!-- spring配置文件由下面的配置：拷贝到META-INF/spring中 -->
-                    <exclude>spring/*.xml</exclude>
-                </excludes>
-            </resource>
-            <!-- com.alibaba.dubbo.container.Main加载spring配置文件的路径 META-INF/spring -->
-            <resource>
-                <targetPath>${project.build.directory}/classes/META-INF/spring</targetPath>
-                <directory>src/main/resources/spring</directory>
-                <filtering>true</filtering>
-                <includes>
-                    <include>*.xml</include>
-                </includes>
-            </resource>
-        </resources>
+
 
         <plugins>
             <!-- 资源文件拷贝插件 -->
