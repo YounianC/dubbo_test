@@ -1,0 +1,2 @@
+logFilter=net.younian.dubbo.filter.LogFilter
+testFilter=net.younian.dubbo.filter.TestFilter
