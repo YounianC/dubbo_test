@@ -16,3 +16,7 @@
 ** 使用自建Main方法类运行spring容器启动dubbo服务**：Dobbo提供的优雅停机高级特性没用上，并且自已编写启动类可能会有缺陷  
 ** 使用Dubbo框架提供的Main方法类运行Spring容器启动服务**：官方建议使用，dubbo框架本身提供启动类（com.alibaba.dubbo.container.Main），可实现优雅关机
 
+* 添加Filter例子
+    * 添加类implements Filter
+    * 在src\main\resources\META-INF\dubbo添加文件,文件名为`com.alibaba.dubbo.rpc.Filter`，内容为`logFilter=net.younian.dubbo.filter.LogFilter`
+    * spring-dubbo.xml添加配置` <dubbo:provider filter="logFilter,testFilter"/>`
