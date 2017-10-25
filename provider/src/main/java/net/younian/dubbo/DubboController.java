@@ -14,7 +14,7 @@ public class DubboController {
     @ResponseBody
     @RequestMapping(value = "getData")
     public String getData() {
-        String str = testServiceImpl.getData();
+        String str = testServiceImpl.getData(-1);
         return str;
     }
 }

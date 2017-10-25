@@ -17,10 +17,11 @@ public class TestServiceImpl implements TestService {
     @Autowired
     private IStrategyDao iStrategyDao;
 
-    public String getData() {
+    @Override
+    public String getData(int count) {
         //List<Map<Object, Object>> list = iStrategyDao.getAll();
         //return JSONObject.toJSONString(list);
-        System.out.println("getData is called");
-        return  "DATA:" + new Date().toString();
+        System.out.println(count + " getData is called");
+        return "DATA:" + new Date().toString();
     }
 }
