@@ -5,6 +5,7 @@ import com.alibaba.dubbo.common.extension.Activate;
 import com.alibaba.dubbo.rpc.*;
 import hystrix.DubboHystrixCommand;
 
+@Activate(group = Constants.CONSUMER)
 public class HystrixFilter implements Filter {
 
     @Override

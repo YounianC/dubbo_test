@@ -90,6 +90,6 @@ public List<T> getActivateExtension(URL url, String[] values, String group) {
 * 启动Provider，启动Consumer，可以看见有一定数量的成功请求，而且在一定次数的请求失败之后Consumer调用直接返回 `getFallback` 的预设值。100次请求完成时间约为10秒左右。
 * **比较：** 去掉Consumer的Filter，重新启动Consumer，100次完成时间是约58秒。
 
-> 由此可以得出：Hystrix能够在服务低成功率时，为了避免多次重复请发（默认dubbo会在请求失败之后重试），并且如果需要保证其他服务的运行，不在等待 **优先级不是很重要服务** 返回，则会直接返回预设结果，防止请求堆积
+> 由此可以得出：Hystrix能够在服务低成功率时，为了避免多次重复请发（默认dubbo会在请求失败之后重试），并且如果需要保证其他服务的运行，不再等待 **优先级不是很重要服务** 返回，则会直接返回预设结果，防止请求堆积。
 
 -----
