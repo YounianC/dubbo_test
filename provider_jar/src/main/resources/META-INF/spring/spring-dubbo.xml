@@ -16,9 +16,9 @@
     <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
     <!-- 用dubbo 20880端口暴露服务 -->
     <dubbo:protocol name="dubbo" port="29014"/>
-    <dubbo:provider filter="logFilter,testFilter"/>
+    <dubbo:provider filter="logFilter"/>
 
     <!-- 声明暴露的接口-->
-    <dubbo:service interface="net.younian.dubbo.TestService" ref="testService"/>
+    <dubbo:service interface="net.younian.dubbo.TestService" ref="testService" timeout="3000"/>
 
 </beans>
